@@ -1,11 +1,12 @@
-package org.lessons.booleaners.springlamiapizzeriarelazioni.controller;
+package org.lessons.booleaners.springlamiapizzeriasecurity.controller;
 
 import jakarta.validation.Valid;
-import org.lessons.booleaners.springlamiapizzeriarelazioni.model.Discount;
-import org.lessons.booleaners.springlamiapizzeriarelazioni.model.Pizza;
-import org.lessons.booleaners.springlamiapizzeriarelazioni.service.IngredientService;
-import org.lessons.booleaners.springlamiapizzeriarelazioni.service.PizzaService;
+import org.lessons.booleaners.springlamiapizzeriasecurity.model.Discount;
+import org.lessons.booleaners.springlamiapizzeriasecurity.model.Pizza;
+import org.lessons.booleaners.springlamiapizzeriasecurity.service.IngredientService;
+import org.lessons.booleaners.springlamiapizzeriasecurity.service.PizzaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -26,13 +27,14 @@ public class PizzaController {
     private IngredientService ingredientService;
 
     @GetMapping()
-    public String pizzas(Model model, @RequestParam(name = "name", required = false) String name) {
+    public String pizzas(Model model, Authentication authentication, @RequestParam(name = "name", required = false) String name) {
         List<Pizza> pizzas;
         if (name != null && ! name.isEmpty()) {
             pizzas = service.findByName(name);
         } else {
             pizzas = service.findAll();
         }
+        model.addAttribute("username", authentication.getName());
         model.addAttribute("pizza", pizzas);
         return "/pizzas/index";
     }

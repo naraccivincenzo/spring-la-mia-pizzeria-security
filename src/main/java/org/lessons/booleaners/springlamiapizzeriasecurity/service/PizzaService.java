@@ -1,7 +1,7 @@
-package org.lessons.booleaners.springlamiapizzeriarelazioni.service;
+package org.lessons.booleaners.springlamiapizzeriasecurity.service;
 
-import org.lessons.booleaners.springlamiapizzeriarelazioni.model.Pizza;
-import org.lessons.booleaners.springlamiapizzeriarelazioni.repo.PizzaRepository;
+import org.lessons.booleaners.springlamiapizzeriasecurity.model.Pizza;
+import org.lessons.booleaners.springlamiapizzeriasecurity.repo.PizzaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

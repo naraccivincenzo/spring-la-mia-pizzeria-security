@@ -1,6 +1,6 @@
-package org.lessons.booleaners.springlamiapizzeriarelazioni.repo;
+package org.lessons.booleaners.springlamiapizzeriasecurity.repo;
 
-import org.lessons.booleaners.springlamiapizzeriarelazioni.model.Ingredient;
+import org.lessons.booleaners.springlamiapizzeriasecurity.model.Ingredient;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

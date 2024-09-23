@@ -1,4 +1,4 @@
-package org.lessons.booleaners.springlamiapizzeriarelazioni.model;
+package org.lessons.booleaners.springlamiapizzeriasecurity.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

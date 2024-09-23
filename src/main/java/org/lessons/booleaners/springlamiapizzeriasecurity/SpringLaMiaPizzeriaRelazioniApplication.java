@@ -1,4 +1,4 @@
-package org.lessons.booleaners.springlamiapizzeriarelazioni;
+package org.lessons.booleaners.springlamiapizzeriasecurity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,8 +1,8 @@
-package org.lessons.booleaners.springlamiapizzeriarelazioni.controller;
+package org.lessons.booleaners.springlamiapizzeriasecurity.controller;
 
 import jakarta.validation.Valid;
-import org.lessons.booleaners.springlamiapizzeriarelazioni.model.Discount;
-import org.lessons.booleaners.springlamiapizzeriarelazioni.service.DiscountService;
+import org.lessons.booleaners.springlamiapizzeriasecurity.model.Discount;
+import org.lessons.booleaners.springlamiapizzeriasecurity.service.DiscountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

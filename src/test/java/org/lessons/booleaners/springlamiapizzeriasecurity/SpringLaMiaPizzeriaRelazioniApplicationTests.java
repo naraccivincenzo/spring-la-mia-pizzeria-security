@@ -1,4 +1,4 @@
-package org.lessons.booleaners.springlamiapizzeriarelazioni;
+package org.lessons.booleaners.springlamiapizzeriasecurity;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
