@@ -1,5 +1,6 @@
 package org.lessons.booleaners.springlamiapizzeriasecurity.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -42,10 +43,12 @@ public class Pizza {
     private Instant updatedAt;
 
     @OneToMany(mappedBy = "pizza", cascade = {CascadeType.REMOVE})
+    @JsonManagedReference
     private List<Discount> discounts;
 
     @ManyToMany()
     @JoinTable(name = "pizza_ingredient", joinColumns = @JoinColumn(name = "pizza_id"), inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
+    @JsonManagedReference
     private List<Ingredient> ingredients;
 
     public Integer getId() {

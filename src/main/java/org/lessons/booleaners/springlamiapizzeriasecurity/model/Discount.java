@@ -1,5 +1,6 @@
 package org.lessons.booleaners.springlamiapizzeriasecurity.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.FutureOrPresent;
@@ -28,6 +29,7 @@ public class Discount {
 
     @ManyToOne
     @JoinColumn(name = "pizza_id", nullable = false)
+    @JsonBackReference
     private Pizza pizza;
 
     public int getId() {

@@ -1,5 +1,6 @@
 package org.lessons.booleaners.springlamiapizzeriasecurity.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -21,6 +22,7 @@ public class Ingredient {
     private String name;
 
     @ManyToMany(mappedBy = "ingredients")
+    @JsonBackReference
     private List<Pizza> pizzas;
 
     public Integer getId() {

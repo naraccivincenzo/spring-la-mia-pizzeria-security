@@ -26,13 +26,13 @@ public class PizzaService {
         return repository.findById(id).get();
     }
 
-    public void create(Pizza pizza) {
-        repository.save(pizza);
+    public Pizza create(Pizza pizza) {
+        return repository.save(pizza);
     }
 
-    public void update(Pizza pizza) {
+    public Pizza update(Pizza pizza) {
         pizza.setUpdatedAt(Instant.now());
-        repository.save(pizza);
+        return repository.save(pizza);
     }
 
     public void delete(int id) {
