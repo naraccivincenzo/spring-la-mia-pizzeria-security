@@ -49,7 +49,7 @@ public class PizzaController {
     public String showDiscount(@PathVariable("id") Integer id, Model model) {
         Discount discount = new Discount();
         discount.setStartDate(LocalDate.now());
-        discount.setPizza(service.getById(id));
+        discount.setPizza(service.getById(id).get());
         model.addAttribute("discount", discount);
         return "/discounts/create";
     }

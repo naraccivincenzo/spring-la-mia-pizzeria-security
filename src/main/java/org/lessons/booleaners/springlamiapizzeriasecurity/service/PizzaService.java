@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PizzaService {
@@ -22,8 +23,8 @@ public class PizzaService {
         return repository.findByNameContainingIgnoreCaseOrderByNameAsc(name);
     }
 
-    public Pizza getById(Integer id) {
-        return repository.findById(id).get();
+    public Optional<Pizza> getById(Integer id) {
+        return repository.findById(id);
     }
 
     public Pizza create(Pizza pizza) {

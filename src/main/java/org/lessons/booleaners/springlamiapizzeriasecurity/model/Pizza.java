@@ -19,22 +19,22 @@ public class Pizza {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotNull
+    @NotNull(message = "The title can't be null")
     @Size(min = 2, max = 255)
     @Column(name = "name", nullable = false)
     private String name;
 
-    @NotNull
+    @NotNull(message = "The description can't be null")
     @Size(min = 10)
     @Lob
     private String description;
 
-    @NotNull
+    @NotNull(message = "The URL can't be null")
     @Size(min = 2, max = 500)
     @Column(length = 500)
     private String photo;
 
-    @NotNull
+    @NotNull(message = "The price can't be null")
     @Positive
     @Column(name = "price" , nullable = false)
     private Double price;
